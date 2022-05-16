@@ -1,18 +1,18 @@
 package Task1;
 
 public class Author {
-    String Name;
-    String Sername;
-    public Author(String Name, String Sername){
-        this.Name = Name;
-        this.Sername = Sername;
+    private final String name;
+    private final String sername;
+    public Author(String name, String sername){
+        this.name = name;
+        this.sername = sername;
     }
 
     public String getAuthorName() {
-        return this.Name;
+        return this.name;
     }
     public String getAuthorSername() {
-        return this.Sername;
+        return this.sername;
     }
 
 }

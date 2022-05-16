@@ -1,30 +1,27 @@
 package Task1;
 
 public class Book {
-    String Name;
+    private final String name;
     int publishDate;
-    String AuthorName;
-    String AuthorSerame;
-    public Book(int publishDate, String Name, Author author) {
+    Author author;
+    public Book(int publishDate, String name, Author author) {
         this.publishDate = publishDate;
-        this.Name = Name;
-        this.AuthorName = author.getAuthorName();
-        this.AuthorSerame = author.getAuthorSername();
+        this.name = name;
+        this.author = author;
     }
 
     public String getBookName() {
-        return this.Name;
+        return this.name;
     }
     public int getPublishDate() {
         return this.publishDate;
     }
     public void getBookAllInfo(){
-        System.out.format("Книга: %s\nАвтор: %s %s\nГод выпуска: %d\n\n", Name, AuthorName, AuthorSerame, publishDate);
+        System.out.format("Книга: %s\nАвтор: %s %s\nГод выпуска: %d\n\n", name, author.getAuthorName(), author.getAuthorSername(), publishDate);
     }
 
     public void setPublishDate(int publishDate) {
         this.publishDate = publishDate;
-        System.out.format("Изменена дата издания!\nНовая дата издания для книги \"%s\" - %d\n\n", Name, publishDate);
     }
 
 
