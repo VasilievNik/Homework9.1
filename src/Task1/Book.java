@@ -2,8 +2,8 @@ package Task1;
 
 public class Book {
     private final String name;
-    int publishDate;
-    Author author;
+    private int publishDate;
+    private Author author;
     public Book(int publishDate, String name, Author author) {
         this.publishDate = publishDate;
         this.name = name;
